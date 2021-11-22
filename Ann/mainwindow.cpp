@@ -7,7 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    workerWindow = new AddWorkerWindow();
+    employeeList = new ManageEmployee();
+    workerWindow = new AddWorkerWindow(employeeList);
     connect(workerWindow, &AddWorkerWindow::firstWindow, this, &MainWindow::show);
 
     generateScheduleWindow = new GenerateScheduleWindow();
@@ -17,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete employeeList;
 }
 
 void MainWindow::on_pushButtonAddNewEmployee_clicked()

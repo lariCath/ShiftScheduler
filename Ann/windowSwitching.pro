@@ -10,15 +10,19 @@ CONFIG += c++11
 
 SOURCES += \
     addworkerwindow.cpp \
+    employee.cpp \
     generateschedulewindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    manageemployee.cpp \
     schedulewindow.cpp
 
 HEADERS += \
     addworkerwindow.h \
+    employee.h \
     generateschedulewindow.h \
     mainwindow.h \
+    manageemployee.h \
     schedulewindow.h
 
 FORMS += \

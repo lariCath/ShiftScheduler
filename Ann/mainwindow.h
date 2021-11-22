@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <addworkerwindow.h>
 #include <generateschedulewindow.h>
+#include "manageemployee.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,7 +19,6 @@ public:
     ~MainWindow();
 
 private slots:
-
     void on_pushButtonAddNewEmployee_clicked();
     void on_pushButtonCreateNewSchedule_clicked();
 
@@ -26,6 +26,7 @@ private:
     Ui::MainWindow *ui;
     AddWorkerWindow *workerWindow;
     GenerateScheduleWindow *generateScheduleWindow;
+    ManageEmployee *employeeList;
 };
 
 #endif // MAINWINDOW_H
