@@ -13,7 +13,34 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButtonAddNewEmployee">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>70</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add new employee</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCreateNewSchedule">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>120</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Create new schedule</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -23,6 +50,12 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuShiftScheduler">
+    <property name="title">
+     <string>ShiftScheduler</string>
+    </property>
+   </widget>
+   <addaction name="menuShiftScheduler"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
