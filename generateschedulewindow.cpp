@@ -31,7 +31,7 @@ void GenerateScheduleWindow::on_pushButtonCreateSchedule_clicked()
     std::cout << "----------------------" << shiftdates->GetStartDate().toString().toStdString() << std::endl;
     std::cout << "----------------------" << shiftdates->GetEndDate().toString().toStdString() << std::endl;
     this->close();
-    scheduleWindow -> open();
+    //scheduleWindow -> open();
 }
 
 void GenerateScheduleWindow::on_pushButtonCancel_clicked()
