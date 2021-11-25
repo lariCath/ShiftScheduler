@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>311</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pushButtonAddEmployee">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>480</y>
+      <x>360</x>
+      <y>220</y>
       <width>80</width>
       <height>22</height>
      </rect>
@@ -37,7 +37,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="EmployeeNameTextField">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -48,6 +48,42 @@
     </property>
     <property name="text">
      <string>Enter employee's name:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EmployeeWorkloadTextField">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enter employee's workload:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LabelHrsWeek">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>120</y>
+      <width>51</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>hrs/week</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="EmployeeWorkloadSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>120</y>
+      <width>42</width>
+      <height>22</height>
+     </rect>
     </property>
    </widget>
   </widget>
