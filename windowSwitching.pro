@@ -14,6 +14,7 @@ SOURCES += \
     generateschedulewindow.cpp \
     main.cpp \
     mainwindow.cpp \
+    managedateinput.cpp \
     manageemployee.cpp \
     schedulewindow.cpp
 
@@ -22,6 +23,7 @@ HEADERS += \
     employee.h \
     generateschedulewindow.h \
     mainwindow.h \
+    managedateinput.h \
     manageemployee.h \
     schedulewindow.h
 

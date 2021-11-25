@@ -5,6 +5,7 @@
 #include <addworkerwindow.h>
 #include <generateschedulewindow.h>
 #include "manageemployee.h"
+#include "managedateinput.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +28,7 @@ private:
     AddWorkerWindow *workerWindow;
     GenerateScheduleWindow *generateScheduleWindow;
     ManageEmployee *employeeList;
+    ManageDateInput *shiftdates;
 };
 
 #endif // MAINWINDOW_H

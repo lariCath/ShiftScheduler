@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <schedulewindow.h>
+#include "managedateinput.h"
 
 namespace Ui {
 class GenerateScheduleWindow;
@@ -13,7 +14,7 @@ class GenerateScheduleWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit GenerateScheduleWindow(QMainWindow *parent = 0);
+    explicit GenerateScheduleWindow(ManageDateInput *shiftdates, QMainWindow *parent = 0);
     ~GenerateScheduleWindow();
 
 signals:
@@ -25,5 +26,6 @@ private slots:
 private:
     Ui::GenerateScheduleWindow *ui;
     ScheduleWindow *scheduleWindow;
+    ManageDateInput *shiftdates;
 };
 #endif // GENERATESCHEDULEWINDOW_H
