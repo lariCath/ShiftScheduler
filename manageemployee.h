@@ -12,8 +12,8 @@ private:
 
 
 public:
-    void AddEmployee(string name) {
-        Employee employee(name);
+    void AddEmployee(string name, int workload) {
+        Employee employee(name, workload);
         employees.push_back(employee);
     }
 
