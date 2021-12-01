@@ -19,10 +19,12 @@ AddWorkerWindow::~AddWorkerWindow()
 void AddWorkerWindow::on_pushButtonAddEmployee_clicked()
 {
     QLineEdit *nameField = this->findChild<QLineEdit*>("employeeNameField");
+    QSpinBox *workField = this->findChild<QSpinBox*>("EmployeeWorkloadSpinBox");
     assert(nameField);
-    employeeList->AddEmployee(nameField->displayText().toStdString());
+    assert(workField);
+    employeeList->AddEmployee(nameField->displayText().toStdString(),workField->value());
     for (auto &employee : employeeList->GetList()) {
-        std::cout << "----------------------" << employee.GetName() << std::endl;
+        std::cout << "----------------------" << employee.GetName() << employee.GetWorkload() << std::endl;
     }
     this->close();
     emit firstWindow();
