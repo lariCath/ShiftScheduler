@@ -1,7 +1,7 @@
 #include "generateschedulewindow.h"
 #include "ui_generateschedulewindow.h"
 #include <iostream>
-#include "managedateinput.h"
+
 
 GenerateScheduleWindow::GenerateScheduleWindow(ManageDateInput *shiftdates, QMainWindow *parent) :
     QMainWindow(parent),
@@ -26,7 +26,7 @@ void GenerateScheduleWindow::on_pushButtonCreateSchedule_clicked()
     assert(date2Field);
     shiftdates->SetStartDate(date1Field->date());
     shiftdates->SetEndDate(date2Field->date());
-
+    savetocsv(shiftdates);
 
     std::cout << "----------------------" << shiftdates->GetStartDate().toString().toStdString() << std::endl;
     std::cout << "----------------------" << shiftdates->GetEndDate().toString().toStdString() << std::endl;

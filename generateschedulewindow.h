@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <schedulewindow.h>
 #include "managedateinput.h"
+#include "createschedule.h"
 
 namespace Ui {
 class GenerateScheduleWindow;

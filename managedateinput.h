@@ -29,7 +29,7 @@ public:
     }
 
     void SetWeek(){
-        for(QDate day=startDate; day<=endDate; day.addDays(1)){
+        for(QDate day=startDate; day<=endDate; day = day.addDays(1)){
             int i = 0;
             week[i] = day;
             i++;
