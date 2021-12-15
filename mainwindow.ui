@@ -23,6 +23,9 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="toolTip">
+     <string>Add new employee</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -45,6 +48,9 @@
       <width>71</width>
       <height>71</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Create new schedule</string>
     </property>
     <property name="text">
      <string/>
