@@ -4,6 +4,8 @@
 class ScheduleWindow;
 int main(int argc, char *argv[])
 {
+    QIcon::setFallbackSearchPaths(QIcon::fallbackSearchPaths() << ":icons");
+
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

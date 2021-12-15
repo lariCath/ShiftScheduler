@@ -17,27 +17,47 @@
    <widget class="QPushButton" name="pushButtonAddNewEmployee">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>70</y>
-      <width>141</width>
-      <height>22</height>
+      <width>71</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Add new employee</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="qtresource.qrc">
+      <normaloff>:/icons/add_worker.png</normaloff>:/icons/add_worker.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonCreateNewSchedule">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>120</y>
-      <width>141</width>
-      <height>22</height>
+      <x>370</x>
+      <y>200</y>
+      <width>71</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="text">
-     <string>Create new schedule</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="qtresource.qrc">
+      <normaloff>:/icons/schedule.png</normaloff>:/icons/schedule.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>64</width>
+      <height>64</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -47,7 +67,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuShiftScheduler">
@@ -59,6 +79,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="qtresource.qrc"/>
+ </resources>
  <connections/>
 </ui>
