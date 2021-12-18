@@ -12,22 +12,26 @@ SOURCES += \
     addworkerwindow.cpp \
     createschedule.cpp \
     employee.cpp \
+    fillschedule.cpp \
     generateschedulewindow.cpp \
     main.cpp \
     mainwindow.cpp \
     managedateinput.cpp \
     manageemployee.cpp \
-    schedulewindow.cpp
+    schedulewindow.cpp \
+    shift.cpp
 
 HEADERS += \
     addworkerwindow.h \
     createschedule.h \
     employee.h \
+    fillschedule.h \
     generateschedulewindow.h \
     mainwindow.h \
     managedateinput.h \
     manageemployee.h \
-    schedulewindow.h
+    schedulewindow.h \
+    shift.h
 
 FORMS += \
     addworkerwindow.ui \

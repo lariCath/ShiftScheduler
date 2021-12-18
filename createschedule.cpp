@@ -1,4 +1,6 @@
 #include "createschedule.h"
+#include <string>
+
 using namespace std;
 
 void savetocsv(ManageDateInput *shiftdates){
@@ -20,3 +22,4 @@ void savetocsv(ManageDateInput *shiftdates){
     return;
 
 }
+

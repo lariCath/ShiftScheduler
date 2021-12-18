@@ -18,6 +18,7 @@ public:
     }
 
     list<Employee> GetList() {
+        Employee boss("boss", 9999);
         return employees;
     }
 };

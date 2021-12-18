@@ -7,11 +7,6 @@
 #include "managedateinput.h"
 
 void savetocsv(ManageDateInput *shiftdates);
-
-
-
-
-
-
+void converttopdf();
 
 #endif
