@@ -9,10 +9,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     employeeList = new ManageEmployee();
     shiftdates = new ManageDateInput();
+//    shifts = new Shift();
     workerWindow = new AddWorkerWindow(employeeList);
     connect(workerWindow, &AddWorkerWindow::firstWindow, this, &MainWindow::show);
 
-    generateScheduleWindow = new GenerateScheduleWindow(shiftdates);
+    generateScheduleWindow = new GenerateScheduleWindow(shiftdates, employeeList);
     connect(generateScheduleWindow, &GenerateScheduleWindow::firstWindow, this, &MainWindow::show);
 }
 

@@ -14,7 +14,8 @@ class FillSchedule
 private:
     QDate week[7];
     QList<Employee> employeeList;
-    QList<Shift> shifts;
+    QList<Shift> morning_shifts;
+    QList<Shift> evening_shifts;
     int counter;
 
     //check current employye has enought workload for another shift
@@ -50,20 +51,24 @@ public:
 
             CheckFreeWorkloadForMorning(employeeList[counter]);
 
-            Shift morning(week[i], employeeList[counter], true);
+            Shift morning(week[i], employeeList[counter]);
             employeeList[counter].hoursPlanned(4);
-            shifts.push_back(morning);
+            morning_shifts.push_back(morning);
 
             CheckFreeWorkloadForEvening(employeeList[counter]);
 
-            Shift evening(week[i], employeeList[counter], false);
+            Shift evening(week[i], employeeList[counter]);
             employeeList[counter].hoursPlanned(6);
-            shifts.push_back(evening);
+            evening_shifts.push_back(evening);
         }
     }
 
-    QList<Shift> GetShifts(){
-        return shifts;
+    QList<Shift> GetMorningShifts(){
+        return morning_shifts;
+    }
+
+    QList<Shift> GetEveningShifts(){
+        return evening_shifts;
     }
 };
 

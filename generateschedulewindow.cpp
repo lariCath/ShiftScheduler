@@ -1,12 +1,14 @@
 #include "generateschedulewindow.h"
+#include "fillschedule.h"
 #include "ui_generateschedulewindow.h"
 #include <iostream>
 
 
-GenerateScheduleWindow::GenerateScheduleWindow(ManageDateInput *shiftdates, QMainWindow *parent) :
+GenerateScheduleWindow::GenerateScheduleWindow(ManageDateInput *shiftdates, ManageEmployee *employee_list, QMainWindow *parent) :
     QMainWindow(parent),
     ui(new Ui::GenerateScheduleWindow),
-    shiftdates(shiftdates)
+    shiftdates(shiftdates),
+    employee_list(employee_list)
 {
     ui->setupUi(this);
     scheduleWindow = new ScheduleWindow();
@@ -26,7 +28,10 @@ void GenerateScheduleWindow::on_pushButtonCreateSchedule_clicked()
     assert(date2Field);
     shiftdates->SetStartDate(date1Field->date());
     shiftdates->SetEndDate(date2Field->date());
-    savetocsv(shiftdates);
+    shiftdates->SetWeek();
+    FillSchedule schedule = FillSchedule(shiftdates->GetWeek(), employee_list->GetList());
+    schedule.Make();
+    savetocsv(shiftdates, schedule.GetMorningShifts(), schedule.GetEveningShifts());
 
     std::cout << "----------------------" << shiftdates->GetStartDate().toString().toStdString() << std::endl;
     std::cout << "----------------------" << shiftdates->GetEndDate().toString().toStdString() << std::endl;

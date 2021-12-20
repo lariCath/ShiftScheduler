@@ -1,24 +1,28 @@
 #ifndef MANAGEEMPLOYEE_H
 #define MANAGEEMPLOYEE_H
 
-#include <list>
+#include <QList>
 #include "employee.h"
 using namespace std;
 
 class ManageEmployee
 {
 private:
-    list<Employee> employees;
+    QList<Employee> employees;
 
 
 public:
+    ManageEmployee() {
+        Employee boss("boss", 9999);
+        employees.push_back(boss);
+    }
     void AddEmployee(string name, int workload) {
         Employee employee(name, workload);
-        employees.push_back(employee);
+        // push front so that Boss is the last employee to be chosen and not the first
+        employees.push_front(employee);
     }
 
-    list<Employee> GetList() {
-        Employee boss("boss", 9999);
+    QList<Employee> GetList() {
         return employees;
     }
 };

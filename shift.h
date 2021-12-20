@@ -12,19 +12,16 @@ class Shift
 private:
     QDate date;
     string name;
-    string time;
 
 public:
-    Shift(QDate d, Employee n, bool isMorningShift){
+    Shift(QDate d, Employee n){
         date = d;
         name = n.GetName();
-
-        if(isMorningShift){
-        time = "morning";
-        }else{
-            time="evening";
-        }
     };
+
+    string GetName() {
+        return name;
+    }
 };
 
 #endif // SHIFT_H

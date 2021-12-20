@@ -5,6 +5,7 @@
 #include <schedulewindow.h>
 #include "managedateinput.h"
 #include "createschedule.h"
+#include "manageemployee.h"
 
 namespace Ui {
 class GenerateScheduleWindow;
@@ -15,7 +16,7 @@ class GenerateScheduleWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit GenerateScheduleWindow(ManageDateInput *shiftdates, QMainWindow *parent = 0);
+    explicit GenerateScheduleWindow(ManageDateInput *shiftdates, ManageEmployee *employee_list, QMainWindow *parent = 0);
     ~GenerateScheduleWindow();
 
 signals:
@@ -28,5 +29,6 @@ private:
     Ui::GenerateScheduleWindow *ui;
     ScheduleWindow *scheduleWindow;
     ManageDateInput *shiftdates;
+    ManageEmployee *employee_list;
 };
 #endif // GENERATESCHEDULEWINDOW_H
