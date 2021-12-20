@@ -2,7 +2,7 @@
 #define FILLSCHEDULE_H
 
 #include <QDate>
-#include <list>
+#include <QList>
 #include "employee.h"
 #include "shift.h"
 #include "iterator"
@@ -13,47 +13,56 @@ class FillSchedule
 {
 private:
     QDate week[7];
-    list<Employee> employeeList;
-    list<Shift> shifts;
+    QList<Employee> employeeList;
+    QList<Shift> shifts;
+    int counter;
 
     //check current employye has enought workload for another shift
-    void CheckFreeWorkload(Employee e){
+    void CheckFreeWorkloadForEvening(Employee e){
 
-        if(e.GetWorkload() < 6){
-            advance(e, 1); //next employee
+        if(e.notPlannedWorkLoad < 6){
+            counter++;
+        }
+    }
+
+    void CheckFreeWorkloadForMorning(Employee e){
+
+        if(e.notPlannedWorkLoad < 4){
+            counter++;
         }
     }
 
 public:
 
-    FillSchedule(QDate dates[7], list<Employee> employees){
+    FillSchedule(QDate dates[7], QList<Employee> employees){
 
         for(int i = 0; i< 7; i++){
             week[i] = dates[i];
         }
 
         employeeList = employees;
+        counter = 0;
     }
 
     void Make(){
 
-        list<Employee>::iterator it = employeeList.begin(); //get first employee in list
-
         for(int i = 0; i < 7; i++){
 
-            CheckFreeWorkload(*it);
+            CheckFreeWorkloadForMorning(employeeList[counter]);
 
-            Shift morning(week[i], *it, true); //make morning shift
+            Shift morning(week[i], employeeList[counter], true);
+            employeeList[counter].hoursPlanned(4);
             shifts.push_back(morning);
 
-            CheckFreeWorkload(*it);
+            CheckFreeWorkloadForEvening(employeeList[counter]);
 
-            Shift evening(week[i], *it, false); //make evening shift
+            Shift evening(week[i], employeeList[counter], false);
+            employeeList[counter].hoursPlanned(6);
             shifts.push_back(evening);
         }
     }
 
-    list<Shift> GetShifts(){
+    QList<Shift> GetShifts(){
         return shifts;
     }
 };

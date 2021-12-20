@@ -11,10 +11,12 @@ private:
     int workload;
 
 public:
+    int notPlannedWorkLoad;
 
     Employee(string name, int workload) {
         this->name = name;
         this->workload = workload;
+        notPlannedWorkLoad = workload;
     }
 
     string GetName() {
@@ -23,6 +25,10 @@ public:
 
     int GetWorkload(){
         return workload;
+    }
+
+    void hoursPlanned(int planned){
+        notPlannedWorkLoad -= planned;
     }
 
 };
