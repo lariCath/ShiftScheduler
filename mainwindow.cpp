@@ -55,11 +55,11 @@ void MainWindow::on_pushButtonShowAllEmployees_clicked()
         QTextStream(&h) << e.GetWorkload() << " h";
         QLabel *hours = new QLabel(h);
         hours->setFont(font);
-        horizontalField->addWidget(hours);
+        horizontalField->addWidget(hours, 0, Qt::AlignRight);
 
         QLabel *name = new QLabel(e.GetName());
         name->setFont(font);
-        horizontalField->addWidget(name);
+        horizontalField->addWidget(name, 0, Qt::AlignLeft);
 
         verticalField->addLayout(horizontalField);
     }
