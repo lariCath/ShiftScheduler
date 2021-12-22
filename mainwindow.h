@@ -2,10 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
 #include <addworkerwindow.h>
 #include <generateschedulewindow.h>
 #include "manageemployee.h"
 #include "managedateinput.h"
+#include "displayemployeewindow.h"
 #include "shift.h"
 
 namespace Ui {
@@ -23,11 +25,14 @@ public:
 private slots:
     void on_pushButtonAddNewEmployee_clicked();
     void on_pushButtonCreateNewSchedule_clicked();
+    void on_pushButtonShowAllEmployees_clicked();
+
 
 private:
     Ui::MainWindow *ui;
     AddWorkerWindow *workerWindow;
     GenerateScheduleWindow *generateScheduleWindow;
+    DisplayEmployeeWindow *displayEmployeeWindow;
     ManageEmployee *employeeList;
     ManageDateInput *shiftdates;
     Shift *shifts;

@@ -22,9 +22,9 @@ void AddWorkerWindow::on_pushButtonAddEmployee_clicked()
     QSpinBox *workField = this->findChild<QSpinBox*>("EmployeeWorkloadSpinBox");
     assert(nameField);
     assert(workField);
-    employeeList->AddEmployee(nameField->displayText().toStdString(),workField->value());
+    employeeList->AddEmployee(nameField->displayText(),workField->value());
     for (auto &employee : employeeList->GetList()) {
-        std::cout << "----------------------" << employee.GetName() << employee.GetWorkload() << std::endl;
+        std::cout << "----------------------" << employee.GetName().toStdString() << employee.GetWorkload() << std::endl;
     }
     this->close();
     emit firstWindow();

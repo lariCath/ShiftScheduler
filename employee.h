@@ -1,25 +1,25 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
-#include <string>
+#include <QString>
 using namespace std;
 
 
 class Employee
 {
 private:
-    string name;
+    QString name;
     int workload;
 
 public:
     int notPlannedWorkLoad;
 
-    Employee(string name, int workload) {
+    Employee(QString name, int workload) {
         this->name = name;
         this->workload = workload;
         notPlannedWorkLoad = workload;
     }
 
-    string GetName() {
+    QString GetName() {
         return name;
     }
 

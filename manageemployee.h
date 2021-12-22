@@ -16,7 +16,7 @@ public:
         Employee boss("boss", 9999);
         employees.push_back(boss);
     }
-    void AddEmployee(string name, int workload) {
+    void AddEmployee(QString name, int workload) {
         Employee employee(name, workload);
         // push front so that Boss is the last employee to be chosen and not the first
         employees.push_front(employee);
@@ -24,6 +24,15 @@ public:
 
     QList<Employee> GetList() {
         return employees;
+    }
+
+    QString GetNames(){
+        QString names;
+        for (Employee &e : employees){
+            names.append(e.GetName());
+            names.append("\n");
+        }
+        return names;
     }
 };
 

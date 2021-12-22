@@ -19,13 +19,13 @@ void savetocsv(ManageDateInput *shiftdates, QList<Shift> morning, QList<Shift> e
     outputFile << std::endl;
     outputFile << "8:00 - 12:00";
     for(Shift &employee : morning) {
-        outputFile << "," << employee.GetName();
+        outputFile << "," << employee.GetName().toStdString();
     }
     outputFile << std::endl;
 
     outputFile << "12:00 - 18:00";
     for(Shift &employee : evening) {
-        outputFile << "," << employee.GetName();
+        outputFile << "," << employee.GetName().toStdString();
     }
 //    outputFile.close();
     return;

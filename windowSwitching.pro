@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     addworkerwindow.cpp \
     createschedule.cpp \
+    displayemployeewindow.cpp \
     employee.cpp \
     fillschedule.cpp \
     generateschedulewindow.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
 HEADERS += \
     addworkerwindow.h \
     createschedule.h \
+    displayemployeewindow.h \
     employee.h \
     fillschedule.h \
     generateschedulewindow.h \
@@ -35,6 +37,7 @@ HEADERS += \
 
 FORMS += \
     addworkerwindow.ui \
+    displayemployeewindow.ui \
     generateschedulewindow.ui \
     mainwindow.ui \
     schedulewindow.ui

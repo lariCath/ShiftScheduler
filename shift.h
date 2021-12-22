@@ -11,7 +11,7 @@ class Shift
 {
 private:
     QDate date;
-    string name;
+    QString name;
 
 public:
     Shift(QDate d, Employee n){
@@ -19,7 +19,7 @@ public:
         name = n.GetName();
     };
 
-    string GetName() {
+    QString GetName() {
         return name;
     }
 };

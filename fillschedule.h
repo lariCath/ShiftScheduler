@@ -21,7 +21,7 @@ private:
     //check current employye has enought workload for another shift
     void CheckFreeWorkloadForEvening(Employee e){
 
-        if(e.notPlannedWorkLoad < 6){
+        if(e.notPlannedWorkLoad < 4){
             counter++;
         }
     }
